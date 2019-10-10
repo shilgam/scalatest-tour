@@ -3,4 +3,5 @@ services:
   app:
     build: .
     volumes:
-      - ./:/usr/src/app/
+      - ./demo-app/:/usr/src/app/demo-app
+      - ./.m2/:/root/.m2/
