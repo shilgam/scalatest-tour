@@ -1,0 +1,9 @@
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Capybara"
+      script: |
+        docker-compose build
