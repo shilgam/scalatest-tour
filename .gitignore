@@ -1,5 +1,5 @@
 classes/
 */target/
 
-# maven dependencies
-.m2/
+# project dependencies
+/.cache/
