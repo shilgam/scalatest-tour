@@ -1,0 +1,5 @@
+Step 9/10 : RUN mvn verify --file ./$PROJECT_NAME/pom.xml --batch-mode --errors -Dmaven.legacyLocalRepo=true --offline
+
+[ERROR] Failed to execute goal net.alchim31.maven:scala-maven-plugin:3.3.2:compile
+Cannot access central in offline mode
+and the artifact org.scala-lang:scala-compiler:jar:2.12.6 has not been downloaded before.

@@ -1,0 +1,34 @@
+> mvn dependency:tree -Dverbose --file ./demo-app/pom.xml --errors
+
+
+[INFO] com.company:demo-app:jar:1.0
+[INFO] +- org.scala-lang:scala-library:jar:2.12.6:compile
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.scalatest:scalatest_2.12:jar:3.0.5:test
+[INFO] |  +- (org.scala-lang:scala-library:jar:2.12.4:test - omitted for conflict with 2.12.6)
+[INFO] |  +- org.scalactic:scalactic_2.12:jar:3.0.5:test
+[INFO] |  |  +- (org.scala-lang:scala-library:jar:2.12.4:test - omitted for conflict with 2.12.6)
+[INFO] |  |  \- (org.scala-lang:scala-reflect:jar:2.12.4:test - omitted for duplicate)
+[INFO] |  +- org.scala-lang:scala-reflect:jar:2.12.4:test
+[INFO] |  |  \- (org.scala-lang:scala-library:jar:2.12.4:test - omitted for conflict with 2.12.6)
+[INFO] |  \- org.scala-lang.modules:scala-xml_2.12:jar:1.0.6:test
+[INFO] |     \- (org.scala-lang:scala-library:jar:2.12.0:test - omitted for conflict with 2.12.6)
+[INFO] +- org.specs2:specs2-core_2.12:jar:4.2.0:test
+[INFO] |  +- (org.scala-lang:scala-library:jar:2.12.3:test - omitted for conflict with 2.12.6)
+[INFO] |  +- org.specs2:specs2-matcher_2.12:jar:4.2.0:test
+[INFO] |  |  +- (org.scala-lang:scala-library:jar:2.12.3:test - omitted for conflict with 2.12.6)
+[INFO] |  |  \- org.specs2:specs2-common_2.12:jar:4.2.0:test
+[INFO] |  |     +- (org.scala-lang:scala-library:jar:2.12.3:test - omitted for conflict with 2.12.6)
+[INFO] |  |     +- org.specs2:specs2-fp_2.12:jar:4.2.0:test
+[INFO] |  |     |  \- (org.scala-lang:scala-library:jar:2.12.3:test - omitted for conflict with 2.12.6)
+[INFO] |  |     +- (org.scala-lang:scala-reflect:jar:2.12.3:test - omitted for conflict with 2.12.4)
+[INFO] |  |     +- org.scala-lang.modules:scala-parser-combinators_2.12:jar:1.1.0:test
+[INFO] |  |     |  \- (org.scala-lang:scala-library:jar:2.12.4:test - omitted for conflict with 2.12.6)
+[INFO] |  |     \- (org.scala-lang.modules:scala-xml_2.12:jar:1.0.6:test - omitted for duplicate)
+[INFO] |  \- org.scala-sbt:test-interface:jar:1.0:test
+[INFO] \- org.specs2:specs2-junit_2.12:jar:4.2.0:test
+[INFO]    +- (org.scala-lang:scala-library:jar:2.12.3:test - omitted for conflict with 2.12.6)
+[INFO]    +- (org.specs2:specs2-core_2.12:jar:4.2.0:test - omitted for duplicate)
+[INFO]    +- (junit:junit:jar:4.12:test - omitted for duplicate)
+[INFO]    \- (org.scala-sbt:test-interface:jar:1.0:test - omitted for duplicate)

@@ -1,10 +1,4 @@
 version: '3.2'
 services:
   app:
-    build: .
-    # volumes:
-    #   # - ./.cache/:/root/
-    #   # # data vol to store Maven local repository cache
-    #   # - /root/.m2/repository
-    #   - ./demo-app/:/usr/src/app/demo-app
-    #   #   - ./.m2/:/root/.m2/
+    build: ./demo-app
