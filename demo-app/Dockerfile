@@ -14,7 +14,9 @@ RUN mvn package \
 COPY ./src ./src
 
 # build for release
-RUN mvn package --batch-mode --errors --offline
+RUN mvn package \
+  --define maven.test.skip --define skipTests \
+  --offline
 
 # run binary
 CMD ["java", "-jar", "./target/demo-app-0.1-SNAPSHOT-jar-with-dependencies.jar"]
