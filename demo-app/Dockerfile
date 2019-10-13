@@ -5,7 +5,10 @@ WORKDIR $APP_PATH
 
 # install dependencies
 COPY ./pom.xml ./pom.xml
-# << install dependencies >>
+RUN mvn package \
+  # skip test: https://github.com/scalatest/scalatest/issues/466#issuecomment-108933560
+  --define maven.test.skip --define skipTests \
+  --batch-mode --errors
 
 # copy source files
 COPY ./src ./src
