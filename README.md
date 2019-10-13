@@ -1,5 +1,7 @@
 # scala-tour
 
+[![Build Status](https://travis-ci.com/shilgam/scala-tour.svg?branch=master)](https://travis-ci.com/shilgam/scala-tour)
+
 ## Prerequisites
 
 1. Docker and docker-compose installed
