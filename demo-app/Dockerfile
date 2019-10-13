@@ -1,4 +1,4 @@
-FROM maven:3.6.2-jdk-8
+FROM maven:3.6.1-jdk-8-alpine
 
 ARG APP_PATH=/usr/src/app/demo-app
 WORKDIR $APP_PATH
