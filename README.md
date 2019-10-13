@@ -10,10 +10,12 @@
 
 1. Clone the repo
 
-1. Build docker image
+1. build docker image and launch the app
 
-        docker-compose build
+        docker-compose up --build
 
-1. Run app:
+### Run test suite
 
-        docker-compose up
+1. Run unit tests:
+
+        docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm app mvn --offline test

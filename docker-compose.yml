@@ -2,6 +2,3 @@ version: '3.2'
 services:
   app:
     build: ./demo-app
-    volumes:
-      # sync source files
-      - ./scr:/usr/src/app/demo-app/src

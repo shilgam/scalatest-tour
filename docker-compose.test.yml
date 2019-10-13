@@ -1,0 +1,6 @@
+version: '3.2'
+services:
+  app:
+    volumes:
+      # sync source files
+      - ./demo-app/:/usr/src/app/demo-app
