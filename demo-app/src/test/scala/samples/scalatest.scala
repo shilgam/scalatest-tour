@@ -25,38 +25,38 @@ http://www.scalatest.org/
 One way to use ScalaTest is to help make JUnit or TestNG tests more
 clear and concise. Here's an example:
 */
-import scala.collection._
+import scala.collection.mutable.Stack
 import org.scalatest.Assertions
 import org.junit.Test
 
 class StackSuite extends Assertions {
 
   @Test def stackShouldPopValuesIinLastInFirstOutOrder() {
-    val stack = new mutable.ArrayStack[Int]
+    val stack = new Stack[Int]
     stack.push(1)
     stack.push(2)
     assert(stack.pop() === 2)
     assert(stack.pop() === 1)
   }
 
-  @Test def stackShouldThrowRuntimeExceptionIfAnEmptyArrayStackIsPopped() {
-    val emptyStack = new mutable.ArrayStack[String]
-    intercept[RuntimeException] {
+  @Test def stackShouldThrowNoSuchElementExceptionIfAnEmptyStackIsPopped() {
+    val emptyStack = new Stack[String]
+    intercept[NoSuchElementException] {
       emptyStack.pop()
     }
   }
 }
 
 /*
-Here's an example of a FunSuite with Matchers mixed in:
+Here's an example of a FunSuite with ShouldMatchers mixed in:
 */
 import org.scalatest.FunSuite
-import org.scalatest.Matchers
+import org.scalatest.matchers.ShouldMatchers
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
-class ListSuite extends FunSuite with Matchers {
+class ListSuite extends FunSuite with ShouldMatchers {
 
   test("An empty list should be empty") {
     List() should be ('empty)
@@ -85,22 +85,23 @@ A Map
 - should report its size as the number of key/value pairs it contains
 */
 import org.scalatest.FunSpec
+import scala.collection.mutable.Stack
 
 class ExampleSpec extends FunSpec {
 
-  describe("An ArrayStack") {
+  describe("A Stack") {
 
     it("should pop values in last-in-first-out order") {
-      val stack = new mutable.ArrayStack[Int]
+      val stack = new Stack[Int]
       stack.push(1)
       stack.push(2)
       assert(stack.pop() === 2)
       assert(stack.pop() === 1)
     }
 
-    it("should throw RuntimeException if an empty array stack is popped") {
-      val emptyStack = new mutable.ArrayStack[Int]
-      intercept[RuntimeException] {
+    it("should throw NoSuchElementException if an empty stack is popped") {
+      val emptyStack = new Stack[Int]
+      intercept[NoSuchElementException] {
         emptyStack.pop()
       }
     }
