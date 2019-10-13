@@ -3,4 +3,5 @@ services:
   app:
     build: ./demo-app
     volumes:
-      - ./:/usr/src/app/
+      # sync source files
+      - ./scr:/usr/src/app/demo-app/src
