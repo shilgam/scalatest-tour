@@ -19,3 +19,7 @@
 1. Run unit tests:
 
         docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm app mvn --offline test
+
+## Additional info
+
+* ScalaTest User Guide: http://www.scalatest.org/user_guide
