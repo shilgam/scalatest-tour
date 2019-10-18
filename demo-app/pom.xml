@@ -77,6 +77,14 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.scalacheck/scalacheck -->
+    <dependency>
+      <groupId>org.scalacheck</groupId>
+      <artifactId>scalacheck_${scala.compat.version}</artifactId>
+      <version>1.14.2</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
