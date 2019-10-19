@@ -1,6 +1,6 @@
 # scala-tour
 
-[![Build Status](https://travis-ci.com/shilgam/scala-tour.svg?branch=master)](https://travis-ci.com/shilgam/scala-tour)
+[![Build Status](https://travis-ci.com/shilgam/scalatest-tour.svg?branch=master)](https://travis-ci.com/shilgam/scalatest-tour)
 
 ## Prerequisites
 
