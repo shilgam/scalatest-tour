@@ -21,7 +21,7 @@ class GeneratorDrivenPropertyCheckExample extends FlatSpec with Matchers with Ge
         else if (n != 0)
           f.numer should be < 0
         else
-          f.numer should be === 0
+          f.numer should be (0)
 
         f.denom should be > 0
       }
